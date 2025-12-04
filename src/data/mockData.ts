@@ -1,4 +1,4 @@
-import { Organization, Contract, User, DashboardStats } from '@/types';
+import { Organization, Contract, User, DashboardStats, Invoice } from '@/types';
 
 export const mockOrganizations: Organization[] = [
   { id: '1', name: 'Tech Solutions Ltda', cnpj: '12.345.678/0001-90', createdAt: '2024-01-15' },
@@ -115,3 +115,18 @@ export const getConsumptionStatus = (consumed: number, plan: number): 'normal' |
   if (percentage >= 80) return 'warning';
   return 'normal';
 };
+
+export const mockInvoices: Invoice[] = [
+  { id: 'INV-001', organizationId: '1', organizationName: 'Tech Solutions Ltda', cnpj: '12.345.678/0001-90', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 450, planValue: 500, excessDocuments: 0, excessValue: 0, totalValue: 500, status: 'paid', paymentDate: '2024-11-08' },
+  { id: 'INV-002', organizationId: '1', organizationName: 'Tech Solutions Ltda', cnpj: '12.345.678/0001-90', referenceMonth: '2024-11', dueDate: '2024-12-10', issueDate: '2024-11-30', documentsUsed: 520, planValue: 500, excessDocuments: 20, excessValue: 15, totalValue: 515, status: 'pending' },
+  { id: 'INV-003', organizationId: '2', organizationName: 'Construções ABC S.A.', cnpj: '23.456.789/0001-01', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 800, planValue: 750, excessDocuments: 50, excessValue: 37.50, totalValue: 787.50, status: 'paid', paymentDate: '2024-11-05' },
+  { id: 'INV-004', organizationId: '2', organizationName: 'Construções ABC S.A.', cnpj: '23.456.789/0001-01', referenceMonth: '2024-11', dueDate: '2024-12-10', issueDate: '2024-11-30', documentsUsed: 720, planValue: 750, excessDocuments: 0, excessValue: 0, totalValue: 750, status: 'pending' },
+  { id: 'INV-005', organizationId: '3', organizationName: 'Comércio Digital ME', cnpj: '34.567.890/0001-12', referenceMonth: '2024-09', dueDate: '2024-10-10', issueDate: '2024-09-30', documentsUsed: 200, planValue: 300, excessDocuments: 0, excessValue: 0, totalValue: 300, status: 'overdue' },
+  { id: 'INV-006', organizationId: '3', organizationName: 'Comércio Digital ME', cnpj: '34.567.890/0001-12', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 280, planValue: 300, excessDocuments: 0, excessValue: 0, totalValue: 300, status: 'paid', paymentDate: '2024-11-09' },
+  { id: 'INV-007', organizationId: '4', organizationName: 'Indústria XYZ Ltda', cnpj: '45.678.901/0001-23', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 350, planValue: 400, excessDocuments: 0, excessValue: 0, totalValue: 400, status: 'paid', paymentDate: '2024-11-10' },
+  { id: 'INV-008', organizationId: '4', organizationName: 'Indústria XYZ Ltda', cnpj: '45.678.901/0001-23', referenceMonth: '2024-11', dueDate: '2024-12-10', issueDate: '2024-11-30', documentsUsed: 420, planValue: 400, excessDocuments: 20, excessValue: 24, totalValue: 424, status: 'pending' },
+  { id: 'INV-009', organizationId: '5', organizationName: 'Serviços Integrados S.A.', cnpj: '56.789.012/0001-34', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 600, planValue: 650, excessDocuments: 0, excessValue: 0, totalValue: 650, status: 'paid', paymentDate: '2024-11-07' },
+  { id: 'INV-010', organizationId: '6', organizationName: 'Logística Express Ltda', cnpj: '67.890.123/0001-45', referenceMonth: '2024-11', dueDate: '2024-12-10', issueDate: '2024-11-30', documentsUsed: 550, planValue: 500, excessDocuments: 50, excessValue: 42.50, totalValue: 542.50, status: 'pending' },
+  { id: 'INV-011', organizationId: '7', organizationName: 'Financeira Capital ME', cnpj: '78.901.234/0001-56', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 140, planValue: 200, excessDocuments: 0, excessValue: 0, totalValue: 200, status: 'cancelled' },
+  { id: 'INV-012', organizationId: '8', organizationName: 'Educação Premium S.A.', cnpj: '89.012.345/0001-67', referenceMonth: '2024-10', dueDate: '2024-11-10', issueDate: '2024-10-31', documentsUsed: 900, planValue: 800, excessDocuments: 100, excessValue: 90, totalValue: 890, status: 'paid', paymentDate: '2024-11-06' },
+];

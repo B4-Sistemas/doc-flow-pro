@@ -47,3 +47,20 @@ export interface BillingItem {
   totalValue: number;
   period: string;
 }
+
+export interface Invoice {
+  id: string;
+  organizationId: string;
+  organizationName: string;
+  cnpj: string;
+  referenceMonth: string;
+  dueDate: string;
+  issueDate: string;
+  documentsUsed: number;
+  planValue: number;
+  excessDocuments: number;
+  excessValue: number;
+  totalValue: number;
+  status: 'pending' | 'paid' | 'overdue' | 'cancelled';
+  paymentDate?: string;
+}

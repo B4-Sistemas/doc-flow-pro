@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Contracts from "./pages/Contracts";
 import ContractForm from "./pages/ContractForm";
 import Organizations from "./pages/Organizations";
+import Invoices from "./pages/Invoices";
 import Billing from "./pages/Billing";
 import Users from "./pages/Users";
 import Settings from "./pages/Settings";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/contracts" element={<AppLayout><Contracts /></AppLayout>} />
           <Route path="/contracts/new" element={<AppLayout><ContractForm /></AppLayout>} />
           <Route path="/organizations" element={<AppLayout><Organizations /></AppLayout>} />
+          <Route path="/invoices" element={<AppLayout><Invoices /></AppLayout>} />
           <Route path="/billing" element={<AppLayout><Billing /></AppLayout>} />
           <Route path="/users" element={<AppLayout><Users /></AppLayout>} />
           <Route path="/settings" element={<AppLayout><Settings /></AppLayout>} />
