@@ -7,7 +7,8 @@ import {
   Settings,
   LogOut,
   ChevronLeft,
-  Menu
+  Menu,
+  Receipt
 } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
 import { Button } from '@/components/ui/button';
@@ -19,6 +20,7 @@ const navItems = [
   { title: 'Dashboard', url: '/', icon: LayoutDashboard },
   { title: 'Contratos', url: '/contracts', icon: FileText },
   { title: 'Organizações', url: '/organizations', icon: Building2 },
+  { title: 'Faturas', url: '/invoices', icon: Receipt },
   { title: 'Financeiro', url: '/billing', icon: DollarSign },
   { title: 'Usuários', url: '/users', icon: Users },
   { title: 'Configurações', url: '/settings', icon: Settings },
