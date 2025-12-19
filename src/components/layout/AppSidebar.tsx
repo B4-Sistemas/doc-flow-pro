@@ -45,7 +45,6 @@ export function AppSidebar() {
           {!collapsed && (
             <div className="flex items-center gap-3">
               <img src={logoHeader} alt="B4 Sign" className="h-8 w-auto" />
-              <span className="font-bold text-lg text-primary">B4 Sign</span>
             </div>
           )}
           <Button
