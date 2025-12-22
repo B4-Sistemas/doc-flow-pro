@@ -3,6 +3,9 @@ export interface Organization {
   name: string;
   cnpj: string;
   createdAt: string;
+  isPrincipal?: boolean; // Se é organização principal
+  parentOrganizationId?: string; // ID da organização principal (se vinculada)
+  consumed?: number; // Consumo individual da organização
 }
 
 export interface Contract {
